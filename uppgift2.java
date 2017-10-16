@@ -5,11 +5,11 @@ public class uppgift2{
 
 		String rs;
 
-		rs = JOptionPane.showInputDialog(null, "Vad är Cirkelns radie?");
+		rs = JOptionPane.showInputDialog(null, "What is the cirkles radius");
 		int r = Integer.parseInt(rs);
 		double area = Cirkel.areas(r);
 		double omkr = Cirkel.omkrs(r);
-		JOptionPane.showMessageDialog(null, "Arean är: " + area + "\n" + "Omkretsen är: " + omkr);
+		JOptionPane.showMessageDialog(null, "The area is: " + area + "\n" + "The circumference is: " + omkr);
 
 	}
 }
