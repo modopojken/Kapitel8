@@ -2,27 +2,34 @@ import javax.swing.*;
 
 public class uppgift2{
 	public static void main(String[] args){
+char a1 = '\u00E5'; //å
+char a2 = '\u00E4'; //ä
+char o1 = '\u00F6'; // ö
+	String Svars;
+		Svars = JOptionPane.showInputDialog(null, "Vilket år är det i år?");
+		int svar = Integer.parseInt(Svars);
+		boolean svarb = Kalender.LeapYear(svar);
+		if(svarb == true){
+			JOptionPane.showMessageDialog(null, "Det är skottår!");
+		}else if(svarb == false){
+			JOptionPane.showMessageDialog(null, "Det är inte skottår");
+		}
 
-		String rs;
-
-		rs = JOptionPane.showInputDialog(null, "What is the cirkles radius");
-		int r = Integer.parseInt(rs);
-		double area = Cirkel.areas(r);
-		double omkr = Cirkel.omkrs(r);
-		JOptionPane.showMessageDialog(null, "The area is: " + area + "\n" + "The circumference is: " + omkr);
 
 	}
 }
-class Cirkel{
+class Kalender{
 
-	public static double areas(int r){
+	public static boolean LeapYear(int Year){
 
-		return r * r * Math.PI;
+
+		if(Year%4 == 0 && Year%400 != 0){
+			return true;
+		}else{
+			return false;
+		}
 		
 
-	}
-	public static double omkrs(int r){
-		return r * 2 * Math.PI;
 	}
 
 
